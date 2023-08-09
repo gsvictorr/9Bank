@@ -1,69 +1,176 @@
 <!--Html básico-->
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Título-->
-    <title>9Bank</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Ícone-->
-    <link
-      rel="shortcut icon"
-      href="components/imgs/icon.ico"
-      type="image/x-icon"
-    />
-    <!--Importando CSS-->
-    <link rel="stylesheet" href="styles/global.css" />
-    <!--Importando fonte e icone menu-->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Kanit&family=Noto+Sans:ital,wght@0,200;0,400;0,500;0,700;1,100&family=Rubik+Gemstones&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <!--Título-->
+  <title>9Bank</title>
 
-  <body>
+  <!--Ícone-->
+  <link rel="shortcut icon" href="components/imgs/icon.ico" type="image/x-icon" />
+  <!--Importando CSS-->
+  <link rel="stylesheet" href="styles/global.css" />
+  <!--Importando fonte e icone menu-->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Kanit&family=Noto+Sans:ital,wght@0,200;0,400;0,500;0,700;1,100&family=Rubik+Gemstones&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <!--HEADER-->
-    <header>
-      <!--NavBar-->
-      <a href="#home" class="logo"><span>9</span>Bank</a>
-      <div class="bx bx-menu" id="menu-icon"></div>
-      <ul class="navbar">
-        <li><a href="#home">Início</a></li>
+<body>
+  <!--------------------------HEADER-------------------------->
+  <header>
+    <!--NavBar-->
+    <a href="#home" class="logo"><span>9</span>Bank</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navbar">
+      <li><a href="#home">Início</a></li>
 
-        <!--Menu Drop Serviços-->
-        <li>
-          <a href="#services">Serviços &#9662;</a>
-          <ul class="dropdown">
-            <li><a href="#open-account">Abertura de conta</a></li>
-            <li><a href="#credit-cards">Cartões de crédito</a></li>
-            <li><a href="#financing">Financiamentos</a></li>
-            <li><a href="#investments">Investimentos</a></li>
-          </ul>
-        </li>
+      <!--Menu Drop Serviços-->
+      <li>
+        <a href="#services">Serviços &#9662;</a>
+        <ul class="dropdown">
+          <li><a href="#open-account">Abertura de conta</a></li>
+          <li><a href="#credit-cards">Cartões de crédito</a></li>
+          <li><a href="#financing">Financiamentos</a></li>
+          <li><a href="#investments">Investimentos</a></li>
+        </ul>
+      </li>
 
-        <!--Menu Drop Contas-->
-        <li>
-          <a href="#accounts">Contas &#9662;</a>
-          <ul class="dropdown">
-            <li><a href="#checking-account">Conta corrente</a></li>
-            <li><a href="#savings-account">Conta poupança</a></li>
-          </ul>
-        </li>
-        <li><a href="#custumer-service">Atendimento</a></li>
-        <li><a href="#login" id="login" class="bx bxs-user"></a></li>
-      </ul>
-    </header>
+      <!--Menu Drop Contas-->
+      <li>
+        <a href="#accounts">Contas &#9662;</a>
+        <ul class="dropdown">
+          <li><a href="#checking-account">Conta corrente</a></li>
+          <li><a href="#savings-account">Conta poupança</a></li>
+        </ul>
+      </li>
+      <li><a href="#custumer-service">Atendimento</a></li>
+      <li><a href="#login" id="login" class="bx bxs-user"></a></li>
+    </ul>
+  </header>
 
-    <!--Slider de imagens / informações-->
+  <!------------------------Slider de imagens / informações-------------------------->
 
-  </body>
+  <section class="slider">
+    <div class="slides">
+      <!--Botões para selecionar-->
+      <input type="radio" name="radio-btn" id="radio1" />
+      <input type="radio" name="radio-btn" id="radio2" />
+
+      <!--Imagens Slider-->
+      <div class="slide first">
+        <img src="components/imgs/banner1.jpeg" alt="Image 1" />
+      </div>
+
+      <div class="slide">
+        <a href="http://www.youtube.com" target="_blank" rel="external"><img src="components/imgs/banner2.jpeg"
+            alt="Image 2" /></a>
+      </div>
+
+      <!--Auto navegação-->
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+      </div>
+    </div>
+
+    <div class="manual-navigation">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+    </div>
+  </section>
+
+  <!--------------------------Slider de serviços-------------------------->
+
+  <section class="services-slider">
+    <h1>SERVIÇOS</h1>
+    <button class="pre-btn"><i class="bx bx-chevron-left"></i></button>
+    <button class="next-btn"><i class="bx bx-chevron-right"></i></button>
+
+    <div class="services-container">
+      <!--Card de serviços-->
+      <!--Abertura de conta-->
+      <div class="services-card">
+        <div class="services-imgs">
+          <a href="#"><i class='bx bxs-user-circle'></i></i></a>
+        </div>
+        <div class="services-info">
+          <h2>ABERTURA DE CONTA</h2>
+        </div>
+      </div>
+      <!--Cartão de crédito-->
+      <div class="services-card">
+        <div class="services-imgs">
+          <a href="#"><i class="bx bxs-credit-card"></i></a>
+        </div>
+        <div class="services-info">
+          <h2>CARTÃO DE CRÉDITO</h2>
+        </div>
+      </div>
+      <!--PIX-->
+      <div class="services-card">
+        <div class="services-imgs">
+          <a href="#"><i class='bx bx-money'></i></i></a>
+        </div>
+        <div class="services-info">
+          <h2>PIX</h2>
+        </div>
+      </div>
+      <!--Boletos-->
+      <div class="services-card">
+        <div class="services-imgs">
+          <a href="#"><i class='bx bx-barcode-reader'></i></a>
+        </div>
+        <div class="services-info">
+          <h2>BOLETO</h2>
+        </div>
+      </div>
+      <!--Aplicativo-->
+      <div class="services-card">
+        <div class="services-imgs">
+          <a href="#"><i class='bx bx-mobile-alt'></i></i></a>
+        </div>
+        <div class="services-info">
+          <h2>APLICATIVO</h2>
+        </div>
+      </div>
+      <!--Criptomoedas-->
+      <div class="services-card">
+        <div class="services-imgs">
+          <a href="#"><i class='bx bxl-bitcoin'></i></i></a>
+        </div>
+        <div class="services-info">
+          <h2>INVESTIR</h2>
+        </div>
+      </div>
+      <!--Câmbio de moeda-->
+      <div class="services-card">
+        <div class="services-imgs">
+          <a href="#"><i class='bx bx-coin-stack'></i></a>
+        </div>
+        <div class="services-info">
+          <h2>CÂMBIO</h2>
+        </div>
+      </div>
+
+      <!--Situação bancária-->
+      <div class="services-card">
+        <div class="services-imgs">
+          <a href="#"><i class='bx bxs-bank'></i></a>
+        </div>
+        <div class="services-info">
+          <h2>SITUAÇÃO BANCÁRIA</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="js/script.js"></script>
+
 </html>
