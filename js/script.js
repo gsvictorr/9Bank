@@ -34,8 +34,26 @@ productContainers.forEach((item, i) => {
     nextBtn[i].addEventListener('click', () => {
         item.scrollLeft += containerWidth;
     })
-
     preBtn[i].addEventListener('click', () => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+// Função pra mudar a navbar ao rolar a página
+
+let navScroll = document.querySelector("header");
+let logo = document.querySelector(".logo");
+let nav = document.querySelector(".navbar");
+window.onscroll = function(){
+
+    if(window.scrollY > 40){
+        navScroll.classList.add('activeBorder');
+        logo.classList.add('logoColor');
+        nav.classList.add('navColor');
+    } else{
+        navScroll.classList.remove('activeBorder');
+        logo.classList.remove('logoColor');
+        nav.classList.remove('navColor');
+    }
+
+}
