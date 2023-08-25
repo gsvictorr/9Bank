@@ -12,7 +12,7 @@ nextImage();
 
 
 
-// função pra trocar pra próxima imagem
+// função de trocar para a próxima imagem
 function nextImage(){
     count ++;
     if(count>2){
@@ -39,21 +39,57 @@ productContainers.forEach((item, i) => {
     })
 })
 
+
 // Função pra mudar a navbar ao rolar a página
 
 let navScroll = document.querySelector("header");
 let logo = document.querySelector(".logo");
 let nav = document.querySelector(".navbar");
+let home = document.querySelector(".home");
+let services = document.querySelector(".services");
+let accounts = document.querySelector(".accounts");
+let costumerS = document.querySelector(".costumer-service"); 
+let login = document.getElementById('login');
 window.onscroll = function(){
+
+    // 
 
     if(window.scrollY > 40){
         navScroll.classList.add('activeBorder');
         logo.classList.add('logoColor');
         nav.classList.add('navColor');
+        home.classList.add('colorirNav');
+        services.classList.add('colorirNav');
+        accounts.classList.add('colorirNav');
+        costumerS.classList.add('colorirNav');
+        login.style.color = 'black';
     } else{
         navScroll.classList.remove('activeBorder');
         logo.classList.remove('logoColor');
         nav.classList.remove('navColor');
-    }
+        home.classList.remove('colorirNav');
+        services.classList.remove('colorirNav');
+        accounts.classList.remove('colorirNav');
+        costumerS.classList.remove('colorirNav');
+        login.style.color = 'white';
+    }   
 
 }
+
+
+
+// fução efeito animação de scroll
+
+const animation = new IntersectionObserver ((entries) => {
+    entries.forEach ((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('showCoins')
+        } else{
+            entry.target.classList.remove('showCoins')
+        }
+    })
+})
+
+const elements = document.querySelectorAll('.coins-box')
+
+elements.forEach((element) => animation.observe(element))

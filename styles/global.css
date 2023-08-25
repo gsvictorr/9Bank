@@ -26,7 +26,7 @@
 }
 
 body {
-    background: #fff;
+    background: var(--text-color);
     overflow-x: hidden;
 }
 
@@ -45,21 +45,23 @@ header {
     transition: all 90ms ease-out;
 }
 
-header.activeBorder{
+header.activeBorder {
     margin-top: 20px;
     border-radius: 50px;
     background: var(--text-color);
-    transition: .4s ease;
+    transition: .5s ease;
+    width: 80%;
+    margin-left: 180px;
 }
 
- /* LOGO */
+/* LOGO */
 .logo {
     color: var(--text-color);
     font-weight: 700;
     font-size: 2.6rem;
 }
 
-.logoColor{
+.logoColor {
     color: var(--bg-color);
 }
 
@@ -73,7 +75,7 @@ header.activeBorder{
     background: var(--bg-color);
 }
 
-.navColor{
+.navColor {
     background: var(--text-color);
 }
 
@@ -91,6 +93,21 @@ header.activeBorder{
     font-size: 1.2rem
 }
 
+.home.colorirNav {
+    color: var(--bg-color);
+}
+
+.services.colorirNav {
+    color: var(--bg-color);
+}
+
+.accounts.colorirNav {
+    color: var(--bg-color);
+}
+
+.costumer-service.colorirNav {
+    color: var(--bg-color);
+}
 
 .navbar li .dropdown li {
     display: block;
@@ -125,7 +142,7 @@ header.activeBorder{
     border-top: 1px solid var(--separator);
 }
 
-#menu-icon{
+#menu-icon {
     display: none;
 }
 
@@ -138,11 +155,11 @@ header.activeBorder{
     margin-left: 18px;
 }
 
- 
+
 /* SLIDER DE IMAGENS */
 .slider {
     margin: 109px auto;
-    width: 100vw;
+    width: 100%;
     height: 360px;
     overflow: hidden;
     border-bottom: 5px double var(--main-color);
@@ -254,16 +271,17 @@ header.activeBorder{
     margin-top: -90px;
     padding: 5px;
     background: #fff;
+    overflow-x: hidden;
 }
 
-.services-slider h1{
+.services-slider h1 {
     color: var(--bg-color);
-    text-align: center;
-    margin-top: -12px;
+    margin-top: 10px;
     margin-bottom: 15px;
     font-size: 2rem;
     font-weight: 700;
     padding: 6px;
+    text-align: center;
 }
 
 .services-container {
@@ -271,7 +289,7 @@ header.activeBorder{
     height: 220px;
     display: flex;
     scroll-behavior: smooth;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .services-container::-webkit-scrollbar {
@@ -290,7 +308,7 @@ header.activeBorder{
     border: 3px outset var(--border-color-services);
 }
 
-.services-card:hover{
+.services-card:hover {
     border: 3px outset var(--main-color);
     scale: 0.9;
     transition: 0.4s ease-out;
@@ -335,24 +353,24 @@ header.activeBorder{
     background: var(--text-color);
 }
 
-.pre-btn{
+.pre-btn {
     left: 0;
 }
 
-.next-btn{
+.next-btn {
     right: 0;
 }
 
 
 .pre-btn .bx,
-.next-btn .bx{
+.next-btn .bx {
     opacity: 0.2;
     font-size: 4rem;
     color: var(--bg-color);
 }
 
 .pre-btn .bx:hover,
-.next-btn .bx:hover{
+.next-btn .bx:hover {
     opacity: 1;
     transition: .4s ease-out;
 }
@@ -361,21 +379,22 @@ header.activeBorder{
 /* BEST INVESTMENTS */
 
 
-.best-investments{
+.best-investments {
     padding: 20px 17%;
+    background: var(--text-color);
 }
 
-.coin-text{
+.coin-text {
     text-align: center;
 }
 
-.coin-text span{
+.coin-text span {
     color: var(--main-color);
     font-size: 1.6rem;
     font-weight: bold;
 }
 
-.coin-text h2{
+.coin-text h2 {
     color: var(--bg-color);
     font-size: 1.3rem;
     font-weight: 600;
@@ -391,7 +410,24 @@ header.activeBorder{
 }
 
 
-.coins-box{
+.coins-container :nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.coins-container :nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.coins-container :nth-child(4) {
+    transition-delay: 500ms;
+}
+
+.coins-container :nth-child(5){
+    transition-delay: 700ms;
+   }
+
+
+.coins-box {
     position: relative;
     height: auto;
     display: flex;
@@ -402,24 +438,43 @@ header.activeBorder{
     border-radius: 15px;
     padding: 25px;
     overflow: hidden;
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.showCoins {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
 }
 
 
-.coins-box h3{
+
+.coins-box h3 {
     margin-bottom: 5px;
     color: var(--text-color);
     font-size: 1.4rem;
     font-weight: bold;
 }
 
-.coins-box span{
+.coins-box span {
     color: var(--main-color);
     margin-top: 10px;
     font-weight: 600;
+    text-align: center;
 }
 
-.coins-box span span{
-    color: var(--text-color);    
+.coins-box span span {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.coins-box p {
+    color: var(--text-color);
+    text-align: center;
 }
 
 
@@ -428,7 +483,7 @@ header.activeBorder{
     height: 100px;
 }
 
-.coin-img img{
+.coin-img img {
     width: 100%;
     height: 100%;
 }
@@ -439,18 +494,30 @@ header.activeBorder{
 
 
 /* ANIMAÇÕES */
-@keyframes alterarTamanho{
-    0% {scale: 0.9;}
-    50% {scale: 1;}
-    100% {scale: 0.9;}
+@keyframes alterarTamanho {
+    0% {
+        scale: 0.9;
+    }
+
+    50% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 0.9;
+    }
 }
 
-@keyframes alterarTamanhoTexto{
-    0% {font-size: 1.6rem;}
-    50% {font-size: 1.7rem;}
-    100% {font-size: 1.6rem;}
+@keyframes alterarTamanhoTexto {
+    0% {
+        font-size: 1.6rem;
+    }
+
+    50% {
+        font-size: 1.7rem;
+    }
+
+    100% {
+        font-size: 1.6rem;
+    }
 }
-
-
-
-  
