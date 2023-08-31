@@ -26,7 +26,7 @@
 }
 
 body {
-    background: var(--text-color);
+    background: var(--bg-color);
     overflow-x: hidden;
 }
 
@@ -120,10 +120,11 @@ header.activeBorder {
 }
 
 .navbar li .dropdown {
-    width: 200px;
+    width: 210px;
     position: absolute;
     z-index: 999;
     display: none;
+
 }
 
 .navbar li a:hover {
@@ -158,7 +159,7 @@ header.activeBorder {
 
 /* SLIDER DE IMAGENS */
 .slider {
-    margin: 109px auto;
+    margin: 90px auto;
     width: 100%;
     height: 360px;
     overflow: hidden;
@@ -274,14 +275,24 @@ header.activeBorder {
     overflow-x: hidden;
 }
 
-.services-slider h1 {
-    color: var(--bg-color);
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 6px;
+
+.services-text {
+    margin-top: 20px;
     text-align: center;
+}
+
+
+.services-text span{
+    color: var(--bg-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.services-text h1{
+    color: var(--main-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 6px;
 }
 
 .services-container {
@@ -327,12 +338,11 @@ header.activeBorder {
     width: 100%;
     height: 80px;
     padding-top: 1px;
-
+    text-align: center;
 }
 
-.services-info h2 {
+.services-info span {
     color: var(--bg-color);
-    text-align: center;
     font-weight: 400;
     font-size: 1.3rem;
 }
@@ -376,6 +386,9 @@ header.activeBorder {
 }
 
 
+
+
+
 /* BEST INVESTMENTS */
 
 
@@ -415,15 +428,15 @@ header.activeBorder {
 }
 
 .coins-container :nth-child(3) {
-    transition-delay: 300ms;
+    transition-delay: 150ms;
 }
 
 .coins-container :nth-child(4) {
-    transition-delay: 500ms;
+    transition-delay: 200ms;
 }
 
 .coins-container :nth-child(5){
-    transition-delay: 700ms;
+    transition-delay: 250ms;
    }
 
 
@@ -442,6 +455,7 @@ header.activeBorder {
     filter: blur(10px);
     transform: translateX(-100%);
     transition: all 1s;
+    box-shadow: 0px 0px 6px rgb(0, 0, 0);
 }
 
 .showCoins {
@@ -486,6 +500,143 @@ header.activeBorder {
 .coin-img img {
     width: 100%;
     height: 100%;
+}
+
+
+/* INFORMATION */
+
+
+.information{
+    padding: 20px 17%;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 75%, rgba(255,255,255,1) 25%);
+}
+
+.information-text{
+    text-align: center;
+}
+
+
+.information-text span{
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+
+
+
+.information-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    align-items: center;
+    gap: 1.1rem;
+}
+
+
+.information-box{
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: var(--text-color);
+    border-radius: 4px;
+    padding: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px rgb(0, 0, 0);
+}
+
+
+.information-box span{
+    color: var(--main-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+
+}
+
+
+.information-box .bx{
+    margin-top: 10px;
+    color: var(--main-color);
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+
+.information-box p{
+    font-size: 1.1rem;
+    color: var(--bg-color);
+    font-weight: 600;
+}
+
+
+.information-box p span{
+    color: var(--main-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+
+.btn-learn-more{
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--main-color);
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.btn-learn-more:hover{
+    transform: scale(1.1);
+}
+
+
+
+.security{
+    padding: 70px 17%;
+    background: var(--text-color);
+}
+
+.security-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-gap: 1.1rem;
+    align-items: center;
+}
+
+
+.security-box{
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+
+.security-box .bx{
+    font-size: 2rem;
+    border-radius: 10px;
+    padding: 5px;
+    color: var(--bg-color);
+    background: var(--main-color);
+    margin-bottom: 5px;
+}
+
+
+.security-box span{
+    font-size: 1rem;
 }
 
 

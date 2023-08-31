@@ -48,6 +48,7 @@
         <ul class="dropdown">
           <li><a href="#checking-account">Conta corrente</a></li>
           <li><a href="#savings-account">Conta poupança</a></li>
+          <li><a href="#international-account">Conta internacional</a></li>
         </ul>
       </li>
       <li><a href="#custumer-service" class="costumer-service">Atendimento</a></li>
@@ -89,23 +90,26 @@
   <!--------------------------Slider de serviços-------------------------->
 
   <section class="services-slider">
-    <h1>Serviços</h1>
+    <div class="services-text">
+      <h1>Serviços</h1>
+      <span>Confira nossos serviços</span>
+    </div>
     <button class="pre-btn"><i class="bx bx-chevron-left"></i></button>
     <button class="next-btn"><i class="bx bx-chevron-right"></i></button>
 
 
 
-  <!--------Cards de serviços-------->
+    <!--------Cards de serviços-------->
 
     <div class="services-container">
-      
+
       <!--Abertura de conta-->
       <div class="services-card">
         <div class="services-imgs">
           <a href="#"><i class='bx bxs-user-circle'></i></i></a>
         </div>
         <div class="services-info">
-          <h2>ABERTURA DE CONTA</h2>
+          <span>ABERTURA DE CONTA</span>
         </div>
       </div>
       <!--Cartão de crédito-->
@@ -114,16 +118,16 @@
           <a href="#"><i class="bx bxs-credit-card"></i></a>
         </div>
         <div class="services-info">
-          <h2>CARTÃO DE CRÉDITO</h2>
+          <span>CARTÃO DE CRÉDITO</span>
         </div>
       </div>
-      <!--PIX-->
+      <!--Criptomoedas - Investir -->
       <div class="services-card">
         <div class="services-imgs">
-          <a href="#"><i class='bx bx-money'></i></i></a>
+          <a href="#"><i class='bx bxl-bitcoin'></i></i></a>
         </div>
         <div class="services-info">
-          <h2>PIX</h2>
+          <span>INVESTIR</span>
         </div>
       </div>
       <!--Mercado Financeiro-->
@@ -132,7 +136,7 @@
           <a href="#"><i class='bx bx-trending-up'></i></a>
         </div>
         <div class="services-info">
-          <h2>MERCADO FINANCEIRO</h2>
+          <span>MERCADO FINANCEIRO</span>
         </div>
       </div>
       <!--Aplicativo-->
@@ -141,16 +145,16 @@
           <a href="#"><i class='bx bx-mobile-alt'></i></i></a>
         </div>
         <div class="services-info">
-          <h2>APLICATIVO</h2>
+          <span>APLICATIVO</span>
         </div>
       </div>
-      <!--Criptomoedas-->
+      <!--Carteira de Criptos-->
       <div class="services-card">
         <div class="services-imgs">
-          <a href="#"><i class='bx bxl-bitcoin'></i></i></a>
+          <a href="#"><i class='bx bxs-wallet'></i></a>
         </div>
         <div class="services-info">
-          <h2>INVESTIR</h2>
+          <span>CARTEIRA DE CRIPTOS</span>
         </div>
       </div>
       <!--Câmbio de moeda-->
@@ -159,7 +163,7 @@
           <a href="#"><i class='bx bx-coin-stack'></i></a>
         </div>
         <div class="services-info">
-          <h2>CÂMBIO</h2>
+          <span>CÂMBIO</span>
         </div>
       </div>
       <!--Novidades-->
@@ -168,16 +172,25 @@
           <a href="#"><i class='bx bxs-news'></i></i></a>
         </div>
         <div class="services-info">
-          <h2>NOVIDADES</h2>
+          <span>NOVIDADES</span>
         </div>
       </div>
-      <!--Boletos-->
+      <!--QR Code-->
       <div class="services-card">
         <div class="services-imgs">
-          <a href="#"><i class='bx bx-barcode-reader'></i></a>
+          <a href="#"><i class='bx bx-qr-scan'></i></a>
         </div>
         <div class="services-info">
-          <h2>BOLETO</h2>
+          <span>QRCode PAGAMENTOS</span>
+        </div>
+      </div>
+      <!--Atendimento-->
+      <div class="services-card">
+        <div class="services-imgs">
+          <a href="#"><i class='bx bx-conversation'></i></a>
+        </div>
+        <div class="services-info">
+          <span>ATENDIMENTO</span>
         </div>
       </div>
     </div>
@@ -233,6 +246,95 @@
       </div>
 
     </div>
+  </section>
+
+
+
+  <!--------------------------Informações-------------------------->
+
+  <section class="information">
+
+    <div class="information-text">
+      <span>Porque é muito fácil e prático começar a investir!</span>
+    </div>
+
+
+    <div class="information-container">
+
+
+      <!--Abra sua conta-->
+      <div class="information-box">
+        <span>Abra sua conta</span>
+        <a href="#"><i class='bx bxs-user-plus'></i></a>
+        <p>É simples e rápido! <br>Basta clicar no símbolo da conta na parte superior direita e será redirecionado a uma
+          nova página para <span>criar sua conta.</span>
+        </p>
+        <button class="btn-learn-more" id="bt-learn-more-account">Saiba mais</button>
+      </div>
+      <!--Deposite um valor-->
+      <div class="information-box">
+        <span>Deposite um valor inicial</span>
+        <a href="#"><i class='bx bxs-coin-stack'></i></a>
+        <p>Já autenticado na sua conta, deposite algum valor através do seu cartão de crédito ou PIX para começar
+          a investir com a <span>9</span>Bank.
+        </p>
+        <button class="btn-learn-more" id="bt-learn-more-deposit">Saiba mais</button>
+      </div>
+      <!--Diversifique carteira-->
+      <div class="information-box">
+        <span>Diversifique sua carteira</span>
+        <a href="#"><i class='bx bx-wallet'></i></a>
+        <p>Invista nos mais diversos tipos de <span>criptomoedas,</span> ou se preferir temos outros investimentos,
+          como:
+          renda variável, renda fixa e muito mais!
+        </p>
+        <button class="btn-learn-more" id="bt-learn-more-wallet">Saiba mais</button>
+      </div>
+      <!--Receba-->
+      <div class="information-box">
+        <span>Receba seu investimento</span>
+        <a href="#"><i class='bx bx-money-withdraw'></i></a>
+        <p>Depois de investir, você pode receber seus valores diretamente na sua carteira da <span>9</span>Bank Online, e pode
+          <span>sacar quando quiser!</span>
+        </p>
+        <button class="btn-learn-more" id="bt-learn-more-receive">Saiba mais</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!--------------------------Segurança e mais informações-------------------------->
+  <section class="security">
+
+    <div class="security-container">
+      
+      <div class="security-box">
+        <i class='bx bx-fingerprint'></i>
+        <span>Utilizamos o sistema de leitura biométrica
+        <br>para maior segurança e proteção.</span>
+      </div>
+
+      <div class="security-box">
+        <i class='bx bx-cloud' ></i>
+        <span>Todos os dados utilizados são <br>armazenados na nuvem.</span>
+      </div>
+
+
+      <div class="security-box">
+        <i class='bx bx-check-shield' ></i>
+        <span>Proteção para você, seus dados <br>e seus investimentos</span>
+      </div>
+
+      <div class="security-box">
+        <i class='bx bx-fingerprint'></i>
+        <span>Utilizamos o sistema de leitura biométrica
+        <br>para maior segurança e proteção.</span>
+      </div>
+
+      
+    </div>
+
   </section>
 </body>
 
