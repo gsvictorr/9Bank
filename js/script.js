@@ -23,6 +23,7 @@ function nextImage(){
 }
 
 
+// Função passar serviço SLIDER
 const productContainers = [...document.querySelectorAll('.services-container')];
 const nextBtn = [...document.querySelectorAll('.next-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
@@ -41,7 +42,6 @@ productContainers.forEach((item, i) => {
 
 
 // Função pra mudar a navbar ao rolar a página
-
 let navScroll = document.querySelector("header");
 let logo = document.querySelector(".logo");
 let nav = document.querySelector(".navbar");
@@ -78,18 +78,42 @@ window.onscroll = function(){
 
 
 
-// fução efeito animação de scroll
+// função efeito animação de scroll
 
 const animation = new IntersectionObserver ((entries) => {
     entries.forEach ((entry) => {
         if(entry.isIntersecting){
-            entry.target.classList.add('showCoins')
+            entry.target.classList.add('show')
+            numberOfAccounts();
         } else{
-            entry.target.classList.remove('showCoins')
+            entry.target.classList.remove('show')
         }
     })
 })
 
 const elements = document.querySelectorAll('.coins-box')
+const info = document.querySelectorAll('.information-box')
+const finance = document.querySelectorAll('.financial-container')
 
+finance.forEach((element) => animation.observe(element))
+info.forEach((element) => animation.observe(element))
 elements.forEach((element) => animation.observe(element))
+
+
+
+// função aumentando utilização de contas do 9BankOnline
+function numberOfAccounts(){
+var min = 1;
+var max = 5000;
+var duration = 2500; // 2.5 segundos
+var text = document.querySelector("#accounts-active");
+
+
+for(var i = min; i<= max; i++){
+ setTimeout(function(count) {
+    text.textContent = "+" + count;
+ }, i* duration / max, i);
+}
+}
+
+

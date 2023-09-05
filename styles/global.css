@@ -317,12 +317,13 @@ header.activeBorder {
     border-radius: 15px;
     cursor: pointer;
     border: 3px outset var(--border-color-services);
+    transition: .4s ease;
 }
 
 .services-card:hover {
     border: 3px outset var(--main-color);
     scale: 0.9;
-    transition: 0.4s ease-out;
+    transition: .4s ease-out;
 }
 
 .services-imgs .bx {
@@ -458,13 +459,6 @@ header.activeBorder {
     box-shadow: 0px 0px 6px rgb(0, 0, 0);
 }
 
-.showCoins {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-    transition: all 2s;
-}
-
 
 
 .coins-box h3 {
@@ -500,6 +494,14 @@ header.activeBorder {
 .coin-img img {
     width: 100%;
     height: 100%;
+}
+
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
 }
 
 
@@ -546,8 +548,25 @@ header.activeBorder {
     border-radius: 4px;
     padding: 30px;
     overflow: hidden;
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateX(100%);
+    transition: all 1s;
     box-shadow: 0px 0px 6px rgb(0, 0, 0);
 }
+
+.information-container :nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.information-container :nth-child(3) {
+    transition-delay: 150ms;
+}
+
+.information-container :nth-child(4) {
+    transition-delay: 200ms;
+}
+
 
 
 .information-box span{
@@ -560,9 +579,12 @@ header.activeBorder {
 
 .information-box .bx{
     margin-top: 10px;
-    color: var(--main-color);
+    color: var(--text-color);
     font-size: 4rem;
+    padding: 10px;
     margin-bottom: 15px;
+    border-radius: 50%;
+    background: var(--main-color);
 }
 
 
@@ -592,11 +614,12 @@ header.activeBorder {
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: .4s ease;
+    transition: all .3s;
 }
 
 .btn-learn-more:hover{
     transform: scale(1.1);
+    transition: all .3s ease;
 }
 
 
@@ -641,7 +664,213 @@ header.activeBorder {
 
 
 
+/* FINANCIAL MARKET / BENEFITS */
 
+.financial-market{
+    padding: 50px 17%;
+    background: var(--text-color);
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap: 1.5rem;
+}
+
+
+.financial-img{
+    background-image: url(../components/imgs/backgroundFinance.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.financial-text{
+    text-align: center;
+    
+}
+
+.financial-text h3{
+    color: var(--main-color);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.financial-text p{
+    color: var(--bg-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.financial-text span{
+    color: var(--main-color);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.financial-text span span{
+    color: var(--bg-color);
+}
+
+#accounts-active{
+    font-size: 3rem;
+}
+
+.benefits-box{
+    margin-top: 50px;
+    border: 3px outset var(--border-color-services);
+    box-shadow: 0px 0px 6px rgb(0, 0, 0);
+    padding: 40px;
+    border-radius: 4px;
+
+}
+
+.benefits-box p{
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.benefits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    margin-top: 20px;
+}
+
+
+.benefits ol li{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    margin-bottom: 10px;
+    list-style: disc outside;
+}
+
+
+
+/* Enterprise Information */
+
+.enterprise-information{
+    padding: 70px 0px;
+    width: 70%;
+    border-radius: 10px;
+    text-align: center;
+    background: var(--text-color);
+    margin: 30px auto;
+}
+
+.enterprise-information h2{
+    color: var(--bg-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.enterprise-information span{
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.btn-enterprise-information{
+    background: transparent;
+    border: double 5px var(--main-color);
+    width: 25%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn-enterprise-information:hover{
+    transform: scale(1.1);
+    background: var(--main-color);
+    border: double 5px var(--text-color);
+
+}
+
+
+/* FOOTER */
+.footer{
+    padding: 20px 15%;
+}
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-final{
+    padding: 20px 0;
+}
+
+.links{
+    width: 20%;
+}
+
+.links h4{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.links ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+.links ul li a{
+    color: var(--border-color-services);
+    display: block;
+    transition: .3s;
+}
+
+.links ul li a:hover{
+    color: var(--main-color);
+    transform: scale(1.1);
+    transition: .4s ease;
+}
+
+.links h4::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 45px;
+    left: 0;
+    bottom: -7px;
+    background: var(--main-color);
+}
+
+
+
+/* DEVELOPER */
+
+.dev{
+    padding: 20px 17%;
+    text-align: center;
+}
+
+.dev span{
+    color: var(--text-color);
+}
+
+.dev span a{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+
+
+
+
+/* Métodos pra exibir - onscroll */
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
+}
 
 
 /* ANIMAÇÕES */
